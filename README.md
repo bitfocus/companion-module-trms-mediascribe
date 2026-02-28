@@ -1,4 +1,4 @@
-# companion-module-[replace with module name]
+# companion-module-trms-mediascribe
 
 See [HELP.md](./companion/HELP.md) and [LICENSE](./LICENSE)
 

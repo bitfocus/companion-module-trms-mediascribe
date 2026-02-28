@@ -2,7 +2,7 @@ import { Regex, type SomeCompanionConfigField } from '@companion-module/base'
 
 export interface ModuleConfig {
 	host: string
-	port: number
+	apiToken: string
 }
 
 export function GetConfigFields(): SomeCompanionConfigField[] {
@@ -10,18 +10,18 @@ export function GetConfigFields(): SomeCompanionConfigField[] {
 		{
 			type: 'textinput',
 			id: 'host',
-			label: 'Target IP',
+			label: 'MediaScribe Appliance URL',
+			tooltip: 'The full URL of your MediaScribe appliance, e.g. http://192.168.1.100:8080',
 			width: 8,
-			regex: Regex.IP,
+			default: 'http://',
+			regex: Regex.SOMETHING,
 		},
 		{
-			type: 'number',
-			id: 'port',
-			label: 'Target Port',
-			width: 4,
-			min: 1,
-			max: 65535,
-			default: 8000,
+			type: 'textinput',
+			id: 'apiToken',
+			label: 'API Token',
+			width: 8,
+			regex: Regex.SOMETHING,
 		},
 	]
 }
